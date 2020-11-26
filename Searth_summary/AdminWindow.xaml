@@ -1,0 +1,111 @@
+﻿<Window x:Class="Searth_summary.AdminWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Searth_summary"
+        mc:Ignorable="d"
+        Title="AdminWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="359*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="275*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="268*"/>
+            <ColumnDefinition Width="244*"/>
+        </Grid.ColumnDefinitions>
+        <Grid  Grid.ColumnSpan="4"  Grid.Row="1">
+            <DataGrid x:Name="listVacanci" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden" PreviewKeyUp="listVacanci_PreviewKeyUp" PreviewKeyDown="listVacanci_PreviewKeyDown" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="vacanciID" Header="Id" Binding="{Binding Id}" Width="90"/>
+                    <DataGridTextColumn x:Name="vacanciUserID" Header="User ID" Binding="{Binding user_id}" Width="90"/>
+                    <DataGridTextColumn Header="Company" Binding="{Binding name_company}" Width="90"/>
+                    <DataGridTextColumn Header="Job" Binding="{Binding name_job}" Width="90"/>
+                    <DataGridTextColumn Header="Experience" Binding="{Binding experience_job}" Width="90"/>
+                    <DataGridTextColumn Header="Skills" Binding="{Binding skills}" Width="90"/>
+                    <DataGridTextColumn Header="Salary" Binding="{Binding salary}" Width="90"/>
+                    <DataGridTextColumn Header="Create date" Binding="{Binding create_data}" Width="90"/>
+                    <DataGridTextColumn Header="Summary" Binding="{Binding list_summary}" Width="90"/>
+                    <DataGridTextColumn Header="Valid" Binding="{Binding isValid}" Width="90"/>
+                    <DataGridTemplateColumn x:Name="Btn_choose" Width="200" Header="Choose">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button  Content="Choose"  Click="Btn_choose_click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid  Grid.ColumnSpan="4"  Grid.Row="1" >
+            <DataGrid x:Name="listJodseeker" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden" Grid.ColumnSpan="2" PreviewKeyUp="listJodseeker_PreviewKeyUp" PreviewKeyDown="listJodseeker_PreviewKeyDown" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="jodseekerID" Header="ID" Binding="{Binding Id}" Width="90" />
+                    <DataGridTextColumn x:Name="jodseekerUserID" Header="User ID" Binding="{Binding user_id}" Width="90"/>
+                    <DataGridTextColumn Header="First name" Binding="{Binding first_name}" Width="90"/>
+                    <DataGridTextColumn Header="Last name" Binding="{Binding last_name}" Width="90"/>
+                    <DataGridTextColumn Header="Job" Binding="{Binding name_pref_job}" Width="90"/>
+                    <DataGridTextColumn Header="Sxperience" Binding="{Binding my_experience_job}" Width="90"/>
+                    <DataGridTextColumn Header="Skills" Binding="{Binding my_skills}" Width="90"/>
+                    <DataGridTextColumn Header="Salary" Binding="{Binding pref_salary}" Width="90"/>
+                    <DataGridTextColumn Header="Start education" Binding="{Binding create_date}" Width="90"/>
+                    <DataGridTextColumn Header="End education" Binding="{Binding end_data}" Width="90"/>
+
+                    <DataGridTemplateColumn x:Name="Btn_chooseJob" Width="200" Header="Choose">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Choose"  Click="Btn_chooseJob_click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid  Grid.ColumnSpan="4"  Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="425*"/>
+                <ColumnDefinition Width="367*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="listUsers" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden" Grid.ColumnSpan="2"  PreviewKeyUp="listUsers_PreviewKeyUp" PreviewKeyDown="listUsers_PreviewKeyDown" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="UsersID" Header="Id" Binding="{Binding Id}" Width="150"/>
+                    <DataGridTextColumn Header="Create date" Binding="{Binding create_date}" Width="130"/>
+                    <DataGridTextColumn Header="Login" Binding="{Binding login}" Width="90"/>
+                    <DataGridTextColumn Header="Email" Binding="{Binding email}" Width="120"/>
+                    <DataGridTextColumn Header="Access level" Binding="{Binding access_level}" Width="90"/>
+                    <DataGridTextColumn Header="Company" Binding="{Binding company}" Width="90"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Grid  Grid.ColumnSpan="4"  Grid.Row="1" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="425*"/>
+                <ColumnDefinition Width="367*"/>
+            </Grid.ColumnDefinitions>
+            <DataGrid x:Name="CrashTable" AutoGenerateColumns="False" HorizontalGridLinesBrush="DarkGray" RowBackground="LightGray" AlternatingRowBackground="White" Visibility="Hidden" Grid.ColumnSpan="2"  PreviewKeyUp="CrashTable_PreviewKeyUp" PreviewKeyDown="CrashTable_PreviewKeyDown" >
+                <DataGrid.Columns>
+                    <DataGridTextColumn x:Name="alertUsersID" Header="Id" Binding="{Binding Id}" Width="150"/>
+                    <DataGridTextColumn Header="Login" Binding="{Binding login}" Width="90"/>
+                    <DataGridTextColumn Header="Access level" Binding="{Binding access_level}" Width="90"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
+
+        <Button x:Name="Btn_summary" Content="Summary" HorizontalAlignment="Right" Height="25"  VerticalAlignment="Bottom" Width="95" Click="Btn_summary_Click" Visibility="Visible"/>
+        <Button x:Name="Btn_vacancy" Content="Vacancy" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="95" Click="Btn_vacancy_Click"/>
+        <Button x:Name="Btn_Ok" Content="Ок" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="95" Click="Btn_Ok_Click" Visibility="Hidden"/>
+        <Button x:Name="Btn_Users" Content="Users" Grid.Column="2" HorizontalAlignment="Center" Height="25" VerticalAlignment="Bottom" Width="95" Visibility="Visible" Click="Btn_Users_Click" />
+        <Button x:Name="Btn_report" Content="Report summry" Grid.Column="3" HorizontalAlignment="Center" Height="25" VerticalAlignment="Bottom" Width="96" Click="Btn_report_Click" />
+        <Button x:Name="Btn_report_vacancy" Content="Report vacancy" Grid.Column="3" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="96" Click="Btn_report_vacancy_Click" />
+        <CheckBox x:Name="CheckAllert" Content="Crash table" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckAllert_Checked" Unchecked="CheckAllert_Unchecked"/>
+        <Button x:Name="BtnCrashTable" Content="Carsh table" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="2" Height="25" Width="96" Click="BtnCrashTable_Click" Visibility="Hidden"></Button>
+    </Grid>
+</Window>

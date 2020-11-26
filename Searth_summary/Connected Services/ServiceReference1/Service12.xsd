@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" xmlns:tns="http://schemas.datacontract.org/2004/07/JH_Service.Models" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/JH_Service.Models" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:52887/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="ReservAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="access_level" type="xs:int" />
+      <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ReservAccount" nillable="true" type="tns:ReservAccount" />
+  <xs:complexType name="Vacanci">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="create_data" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="experience_job" type="xs:double" />
+      <xs:element minOccurs="0" name="isValid" type="xs:boolean" />
+      <xs:element minOccurs="0" name="list_summary" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="salary" type="xs:decimal" />
+      <xs:element minOccurs="0" name="skills" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Vacanci" nillable="true" type="tns:Vacanci" />
+  <xs:complexType name="JobSeeker">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="create_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="end_data" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="first_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="last_name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="my_experience_job" type="xs:double" />
+      <xs:element minOccurs="0" name="my_skills" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="name_pref_job" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="pref_salary" type="xs:decimal" />
+      <xs:element minOccurs="0" name="user_id" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="JobSeeker" nillable="true" type="tns:JobSeeker" />
+  <xs:complexType name="ArrayOfReservAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ReservAccount" nillable="true" type="tns:ReservAccount" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfReservAccount" nillable="true" type="tns:ArrayOfReservAccount" />
+  <xs:complexType name="ArrayOfAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Account" nillable="true" type="tns:Account" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfAccount" nillable="true" type="tns:ArrayOfAccount" />
+  <xs:complexType name="Account">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Id" type="ser:guid" />
+      <xs:element minOccurs="0" name="access_level" type="xs:int" />
+      <xs:element minOccurs="0" name="company" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="create_date" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="email" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="login" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="password" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Account" nillable="true" type="tns:Account" />
+  <xs:complexType name="ArrayOfJobSeeker">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="JobSeeker" nillable="true" type="tns:JobSeeker" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfJobSeeker" nillable="true" type="tns:ArrayOfJobSeeker" />
+  <xs:complexType name="ArrayOfVacanci">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Vacanci" nillable="true" type="tns:Vacanci" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfVacanci" nillable="true" type="tns:ArrayOfVacanci" />
+</xs:schema>

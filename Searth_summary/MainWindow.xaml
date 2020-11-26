@@ -1,0 +1,58 @@
+﻿<Window x:Class="Searth_summary.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Searth_summary"
+        mc:Ignorable="d"
+        Title="Searth summary" Height="622" Width="654" Icon="StoreLogo.png">
+
+
+    <Window.Background>
+        <ImageBrush ImageSource="Background.jpg"/>
+    </Window.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="12*"/>
+            <RowDefinition Height="133*"/>
+            <RowDefinition Height="40*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+            <RowDefinition Height="30*"/>
+
+            <RowDefinition Height="115*"/>
+            <RowDefinition Height="66*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="140*"/>
+            <ColumnDefinition Width="75*"/>
+            <ColumnDefinition Width="76*"/>
+            <ColumnDefinition Width="32*"/>
+        </Grid.ColumnDefinitions>
+        <Border x:Name="border" BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="127" VerticalAlignment="Top" Width="157" Grid.Column="2" Grid.Row="2" Grid.ColumnSpan="2"   >
+            <StackPanel x:Name="table" Background="#7F020202" Height="125" VerticalAlignment="Top" HorizontalAlignment="Left" Width="155" >
+                <TextBox x:Name="textBoxLogon" Grid.Column="4" Grid.Row="2" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="120" Margin="5,5,0,3" />
+                <PasswordBox x:Name="passwordBox" HorizontalAlignment="Left"  VerticalAlignment="Center"  Width="120" Password="Password"  Height="20" Margin="5,5,0,20"  />
+                <Button x:Name="button_log" Content="Log in"  BorderBrush="White" Background="{x:Null}" Foreground="White"  Height="20" VerticalAlignment="Top" Width="150" Click="button_log_Click"/>
+                <Label/>
+                <Button x:Name="button_reg" Content="Join"    BorderBrush="White" Background="{x:Null}" Foreground="White"  Height="20" Click="button_reg_Click" VerticalAlignment="Top" Width="150" />
+            </StackPanel>
+        </Border>
+        <TextBox x:Name="textBoxLoginReg" Visibility="Hidden" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Height="21" TextWrapping="Wrap" Text="Login" VerticalAlignment="Top" Width="140" />
+        <TextBox x:Name="textBoxCompany" Visibility="Hidden" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Height="22" TextWrapping="Wrap" Text="Company" VerticalAlignment="Center" Width="140" />
+        <TextBox x:Name="textBoxEmail" Visibility="Hidden" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Right" Height="21" TextWrapping="Wrap" Text="Email" VerticalAlignment="Bottom" Width="140" />
+        <PasswordBox x:Name="passwordBoxReg" Visibility="Hidden"  Grid.Column="1" Grid.Row="4" HorizontalAlignment="Right"  VerticalAlignment="Top"  Width="140" Password="Password"  Height="20" ToolTip="Пороль"/>
+        <PasswordBox x:Name="passwordBoxRegCmf" Visibility="Hidden"  Grid.Column="1" Grid.Row="6" HorizontalAlignment="Right"  VerticalAlignment="Top"  Width="140" Password="Password"  Height="20" ToolTip="Подтвердить пороль"/>
+        <GroupBox Visibility="Hidden" x:Name="groupBox"  Grid.Column="1" Header="Деятельность" HorizontalAlignment="Right" Height="96"  Grid.Row="8" VerticalAlignment="Top" Width="145" Foreground="White">
+            <StackPanel Background="#7F020202" >
+                <RadioButton x:Name="radioButton_summary" Content="Соискатель" GroupName="activiy" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <RadioButton x:Name="radioButton_emploer" Content="Работодатель" GroupName="activiy" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+                <RadioButton x:Name="radioButton_recruiter" Content="Рекрутер" GroupName="activiy" HorizontalAlignment="Left" Margin="5,6,0,0" VerticalAlignment="Top" Foreground="White"/>
+            </StackPanel>
+        </GroupBox>
+        <Button Visibility="Hidden" x:Name="Btn_reg" Content="Registration" Grid.Row="9" Width="140" BorderBrush="White" Background="{x:Null}"  Foreground="White"  Height="20" HorizontalAlignment="Center" VerticalAlignment="Top" Grid.Column="1" Click="Btn_reg_Click" Margin="5,0"   />
+        <Button Visibility="Hidden" x:Name="butn_back" Content="Back" Grid.Column="1" Grid.Row="9" Width="140" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center" Background="{x:Null}" Foreground="White" BorderBrush="White" Click="butn_back_Click" Margin="5,23"  />
+    </Grid>
+</Window>
