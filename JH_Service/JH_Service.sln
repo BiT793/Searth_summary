@@ -1,14 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
-VisualStudioVersion = 16.0.30225.117
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searth_summary", "Searth_summary\Searth_summary.csproj", "{6640AF24-4EEF-4D22-A429-1BC27EA72465}"
-	ProjectSection(ProjectDependencies) = postProject
-		{F3963A80-75C2-4DD6-8417-CEF1C8D1171C} = {F3963A80-75C2-4DD6-8417-CEF1C8D1171C}
-	EndProjectSection
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JH_Service", "JH_Service.csproj", "{F3963A80-75C2-4DD6-8417-CEF1C8D1171C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JH_Service", "JH_Service\JH_Service.csproj", "{F3963A80-75C2-4DD6-8417-CEF1C8D1171C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Searth_summary", "..\Searth_summary\Searth_summary\Searth_summary.csproj", "{6640AF24-4EEF-4D22-A429-1BC27EA72465}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,19 +13,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F3963A80-75C2-4DD6-8417-CEF1C8D1171C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F3963A80-75C2-4DD6-8417-CEF1C8D1171C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3963A80-75C2-4DD6-8417-CEF1C8D1171C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3963A80-75C2-4DD6-8417-CEF1C8D1171C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6640AF24-4EEF-4D22-A429-1BC27EA72465}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {DB1D6286-22F5-44AF-8378-7966D177D844}
+		SolutionGuid = {F52F06EC-838C-4ADB-A8BA-51F41BB4ACA0}
 	EndGlobalSection
 EndGlobal
