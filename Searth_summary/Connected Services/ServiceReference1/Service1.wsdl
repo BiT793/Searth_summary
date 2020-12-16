@@ -97,6 +97,12 @@
   <wsdl:message name="IService1_CrashTable_OutputMessage">
     <wsdl:part name="parameters" element="tns:CrashTableResponse" />
   </wsdl:message>
+  <wsdl:message name="IService1_BackupDatabase_InputMessage">
+    <wsdl:part name="parameters" element="tns:BackupDatabase" />
+  </wsdl:message>
+  <wsdl:message name="IService1_BackupDatabase_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BackupDatabaseResponse" />
+  </wsdl:message>
   <wsdl:portType name="IService1">
     <wsdl:operation name="updateAlertUsers">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/updateAlertUsers" message="tns:IService1_updateAlertUsers_InputMessage" />
@@ -157,6 +163,10 @@
     <wsdl:operation name="CrashTable">
       <wsdl:input wsaw:Action="http://tempuri.org/IService1/CrashTable" message="tns:IService1_CrashTable_InputMessage" />
       <wsdl:output wsaw:Action="http://tempuri.org/IService1/CrashTableResponse" message="tns:IService1_CrashTable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BackupDatabase">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/BackupDatabase" message="tns:IService1_BackupDatabase_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/BackupDatabaseResponse" message="tns:IService1_BackupDatabase_OutputMessage" />
     </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
@@ -289,6 +299,15 @@
     </wsdl:operation>
     <wsdl:operation name="CrashTable">
       <soap:operation soapAction="http://tempuri.org/IService1/CrashTable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BackupDatabase">
+      <soap:operation soapAction="http://tempuri.org/IService1/BackupDatabase" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>

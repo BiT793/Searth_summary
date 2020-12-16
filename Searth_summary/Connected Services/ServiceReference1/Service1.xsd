@@ -205,4 +205,14 @@
       </xs:sequence>
     </xs:complexType>
   </xs:element>
+  <xs:element name="BackupDatabase">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="BackupDatabaseResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
 </xs:schema>

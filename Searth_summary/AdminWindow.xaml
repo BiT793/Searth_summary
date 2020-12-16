@@ -103,6 +103,7 @@
         <Button x:Name="Btn_vacancy" Content="Vacancy" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="95" Click="Btn_vacancy_Click"/>
         <Button x:Name="Btn_Ok" Content="Ок" HorizontalAlignment="Left" Height="25" VerticalAlignment="Bottom" Width="95" Click="Btn_Ok_Click" Visibility="Hidden"/>
         <Button x:Name="Btn_Users" Content="Users" Grid.Column="2" HorizontalAlignment="Center" Height="25" VerticalAlignment="Bottom" Width="95" Visibility="Visible" Click="Btn_Users_Click" />
+        <Button x:Name="Btn_Backup" Content="Backup" Grid.Column="2" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="95" Visibility="Visible" Click="Btn_Backup_Click" />
         <Button x:Name="Btn_report" Content="Report summry" Grid.Column="3" HorizontalAlignment="Center" Height="25" VerticalAlignment="Bottom" Width="96" Click="Btn_report_Click" />
         <Button x:Name="Btn_report_vacancy" Content="Report vacancy" Grid.Column="3" HorizontalAlignment="Center" Height="25" VerticalAlignment="Top" Width="96" Click="Btn_report_vacancy_Click" />
         <CheckBox x:Name="CheckAllert" Content="Crash table" Grid.Column="0" HorizontalAlignment="Right" VerticalAlignment="Top" Visibility="Hidden" Checked="CheckAllert_Checked" Unchecked="CheckAllert_Unchecked"/>

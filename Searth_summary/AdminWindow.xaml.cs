@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -38,6 +39,7 @@ namespace Searth_summary
                 Btn_choose.Visibility = Visibility.Hidden;
                 Btn_chooseJob.Visibility = Visibility.Hidden;
                 CheckAllert.Visibility = Visibility.Visible;
+                Btn_Backup.Visibility = Visibility.Visible;
 
             }
             if (access_level == 1)//работадатель
@@ -51,6 +53,7 @@ namespace Searth_summary
                 jodseekerUserID.Visibility = Visibility.Hidden;
                 Btn_choose.Visibility = Visibility.Hidden;
                 Btn_chooseJob.Visibility = Visibility.Hidden;
+                Btn_Backup.Visibility = Visibility.Hidden;
             }
             if (access_level == 2)//рекрутер
             {
@@ -61,6 +64,7 @@ namespace Searth_summary
                 jodseekerID.Visibility = Visibility.Hidden;
                 jodseekerUserID.Visibility = Visibility.Hidden;
                 Btn_Users.Visibility = Visibility.Hidden;
+                Btn_Backup.Visibility = Visibility.Hidden;
             }
             if (access_level == 3)//соискатель
             {
@@ -76,6 +80,7 @@ namespace Searth_summary
                 vacanciUserID.Visibility = Visibility.Hidden;
                 jodseekerID.Visibility = Visibility.Hidden;
                 jodseekerUserID.Visibility = Visibility.Hidden;
+                Btn_Backup.Visibility = Visibility.Hidden;
             }
             if (access_level == 4) 
             {
@@ -92,6 +97,7 @@ namespace Searth_summary
                 jodseekerID.Visibility = Visibility.Hidden;
                 jodseekerUserID.Visibility = Visibility.Hidden;
                 Btn_vacancy.Visibility = Visibility.Hidden;
+                Btn_Backup.Visibility = Visibility.Hidden;
 
             }
 
@@ -305,6 +311,22 @@ namespace Searth_summary
             service.CrashTable();
             CrashTable.Visibility = Visibility.Hidden;
             BtnCrashTable.Visibility = Visibility.Hidden;
+        }
+
+        private void TemerBackupDatabase()
+        {
+            TimerCallback timerCallback = new TimerCallback(CallBackTimerBackup);
+            Timer timer = new Timer(timerCallback, null, 0, 604800000000);
+        }
+
+        public void CallBackTimerBackup(object obj)
+        {
+            service.BackupDatabase();
+        }
+
+        private void Btn_Backup_Click(object sender, RoutedEventArgs e)
+        {
+            CallBackTimerBackup(null);
         }
     }
 }

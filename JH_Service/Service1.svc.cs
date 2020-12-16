@@ -173,5 +173,14 @@ namespace JH_Service
                 return alert;
             
         }
+
+        public void BackupDatabase()
+        {
+            string dbname = db.Database.Connection.Database;
+            string sqlCommand = @"BACKUP DATABASE [JH_DB] TO  DISK = N'D:\Backup\Backup.bak' WITH NOFORMAT, NOINIT,  
+                                    NAME = N'JH_DB_Backup' , SKIP, NOREWIND, NOUNLOAD,  STATS = 10";
+            db.Database.ExecuteSqlCommand(System.Data.Entity.TransactionalBehavior.DoNotEnsureTransaction, 
+                string.Format(sqlCommand, dbname, @"DESKTOP-TLG3S9J\SQLEXPRESS"));  
+        }
     }
 }

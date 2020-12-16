@@ -718,6 +718,12 @@ namespace Searth_summary.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/CrashTable", ReplyAction="http://tempuri.org/IService1/CrashTableResponse")]
         System.Threading.Tasks.Task<bool> CrashTableAsync();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/BackupDatabase", ReplyAction="http://tempuri.org/IService1/BackupDatabaseResponse")]
+        void BackupDatabase();
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IService1/BackupDatabase", ReplyAction="http://tempuri.org/IService1/BackupDatabaseResponse")]
+        System.Threading.Tasks.Task BackupDatabaseAsync();
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -865,6 +871,14 @@ namespace Searth_summary.ServiceReference1 {
         
         public System.Threading.Tasks.Task<bool> CrashTableAsync() {
             return base.Channel.CrashTableAsync();
+        }
+        
+        public void BackupDatabase() {
+            base.Channel.BackupDatabase();
+        }
+        
+        public System.Threading.Tasks.Task BackupDatabaseAsync() {
+            return base.Channel.BackupDatabaseAsync();
         }
     }
 }

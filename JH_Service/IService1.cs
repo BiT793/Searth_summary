@@ -22,11 +22,11 @@ namespace JH_Service
         [OperationContract]
         List<ReservAccount> GetReservs();
         [OperationContract]
-        List<Account> GetAccount( int accessLevel);
+        List<Account> GetAccount(int accessLevel);
         [OperationContract]
-        List<JobSeeker> GetJob( int accessLevel);
+        List<JobSeeker> GetJob(int accessLevel);
         [OperationContract]
-        List<Vacanci> GetVacanci( int accessLevel);
+        List<Vacanci> GetVacanci(int accessLevel);
         [OperationContract]
         void UpdateVacanci(string id, string v, int accessLevel);
         [OperationContract]
@@ -43,6 +43,9 @@ namespace JH_Service
         void updateUser(Account a, int accessLevel);
         [OperationContract]
         bool CrashTable();
+
+        [OperationContract]
+        void BackupDatabase();
     }
 
 
